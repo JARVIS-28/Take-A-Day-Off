@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  <!--this is also not working-->
+    <style>
+       /* CSS to style the sign-up form */
+body{
+    color: #fff;
+    margin-top: 60px;
+   
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  */
+    gap: 100px;
+}
+
+.fa {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    padding: 10px;
+    pointer-events: none;
+}
+
+
+.logo {
+    color: black;
+    font-size: 23.52px;
+    font-family: Inter;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.semester{
+    color:#F1EDD4 ;
+    font-size: 1rem !important;;
+    font-family: 'Courier New',monospace;    
+    /* width: 30%; */
+    
+}
+select{
+    width :30%!important;
+
+}
+
+label {
+    color: black;
+    font-size: 24px;
+    font-family: "Courier New",monospace;
+    font-weight: 700;
+    word-wrap: break-word;
+    
+}
+
+input[type="text"], input[type="email"], input[type="password"]{
+    width: 30%;
+    height: auto;
+    padding: 15px;
+    align-self: center;
+    margin: 5px 0 10px 0;
+    border-radius: 8px;
+    border: none;
+    background: #F1EDD4;
+}
+
+button{
+    background:#FF8C69 ;
+    color :#d5d1d1;
+    border:none;
+    padding: 15px 32px;
+    font-size: 16px;
+    font-family:"Courier New",monospace;
+    border-radius: 16px;
+}
+
+button:hover{
+    background:#ffab91;
+}
+
+</style>
+</head>
+<body>
+    <form class="sign-up">
+        <div class="form-grid">
+            <div>
+                <label for="name">Username:</label>
+                <input type="text" id="name" name="name" placeholder="Username" required>
+            </div>
+    
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+    
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Password" required>
+                <i class="fa fa-eye toggle-password" toggle="#password"></i>
+            </div>
+    
+            <div>
+                <label for="section">Section:</label>
+                <input type="text" id="section" placeholder=" Section" pattern="[A-N]{1}" required>
+            </div>
+
+            <div>
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" placeholder="Confirm password" required>
+                <i class="fa fa-eye toggle-password" toggle="#confirm-password"></i>
+            </div>
+    
+            <div class="semester">
+                <label for="semester">Semester:</label>
+                <select id="semester" name="semester">
+                    <option value="sem1" disabled>1</option>
+                    <option value="sem2" disabled>2</option>
+                    <option value="sem3">3</option>
+                    <option value="sem4" disabled>4</option>
+                </select>
+            </div>
+
+        </div>
+  
+        <div class="submit">
+            <label for="next"></label>
+            <button type="submit" id="next" class="submit-btn">NEXT</button>
+        </div>
+    </form>
+    
+</body>
+<script>
+    $(".toggle-password").click(function() {
+    $(this).toggleClass("fa-eye fa-eye-slash");
+    var input = $($(this).attr("toggle"));
+    if (input.attr("type") == "password") {
+        input.attr("type", "text");
+    } else {
+        input.attr("type", "password");
+    }
+});
+
+</script><!-- this code is not working-->
+</html>
