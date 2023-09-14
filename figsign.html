@@ -16,66 +16,88 @@ body{
     align-items: center;
 }
 
-.form-grid {
-    /* display: grid;
+/* .form-grid { 
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  */
-    /* gap: 100px; */ 
-}
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 100px; 
+}  */
 
-.fa {
+/* .fa {
     position: absolute;
     right: 15px;
     top: 10px;
     padding: 10px;
     pointer-events: none;
-}
+} */
 
 .container{
     display:justified;
     justify-content: space-between;
     flex:1;
 }
+
 .sup{
-    /* width: 50%; */
-    height: 50%;
+    position:relative;
+    top:95px;
+    left:15px;
+    height: 500px;
+    width:auto;
     flex:1;
 }
+
 .sign-up{
     /* width: 50%; */
-    height: 50%;
+    height: 70%;
 }
+
 .idk-broo{
         display:flex;
 }
 
 .logo {
     position:fixed;
-    top:20px;
-    left:0;
+    top:35px;
+    left:10px;
+    height: 100px;
+    width: auto;
     /* size: 50%; -->this didnt work */
+}
+
+h1{
+    position:absolute;
+    top:130px;
+    left:220px;
+    color: black;
+    font-size: 24px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    text-decoration: underline;
+    
 }
 
 .semester{
     color:#F1EDD4 ;
-    font-size: 1rem !important;;
-    font-family: 'Courier New',monospace;    
-    /* width: 30%; */
-    
+    font-size: 1rem !important;
+    font-family: 'Courier New',monospace;
+    /* width: 30%;    */
 }
+
 .top-margin{
     position: relative;
     bottom:50px;
     background-color: #ff9292;
-    height: 70px;
+    height: 50px;
     width: 100%;
 }
+
 .canvas-container {
     width: 50%;
     display: flex;
     justify-content: flex-end;
 }
+
 canvas {
     border-radius: 0 50% 50% 0;
     width: 100%;
@@ -84,9 +106,20 @@ canvas {
     margin-top: 20px;
     background-color: white;
 }
-select{
-    width :30%!important;
 
+select{
+    width :25%!important;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    width: 200px; 
+    padding: 10px;
+    border: none;
+    border-radius: 5px; 
+    background-color: #F1D9c6; 
+    color: #333; 
+    font-size: 16px;
 }
 
 label {
@@ -103,33 +136,49 @@ input[type="text"], input[type="email"], input[type="password"]{
     height: auto;
     padding: 15px;
     align-self: center;
-    margin: 5px 0 10px 0;
+    margin: 5px 0 10px 15px;
     border-radius: 8px;
     border: none;
     background: #F1D9c6;
 }
 
 button{
+    position:relative;
+    top:15px;
+    left:500px;
     background:#b7cdfe ;
     color:rgb(24, 24, 123);
     border:none;
-    padding: 15px 32px;
+    padding: 10px 30px;
     font-size: 16px;
     font-family:"Courier New",monospace;
-    border-radius: 16px;
+    border-radius: 12px;
 }
 
 button:hover{
     background:#96adde;
 }
 
+.white-box{
+    width: 53%;
+    height: calc(100vh - 45px);
+    background-color: white;
+    position: fixed;
+    top: 45px; 
+    right: 0; 
+    z-index: -1;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
 </style>
 </head>
 <body>
     <div class="top-margin">
-    <img src="logo.png" class="logo">
+    <!-- <img src="logo.png" class="logo"> -->
     <div class="idk-broo">
-    <img src="sign_up_page.png" alt="sup" class="sup">
+    <!-- <img src="sign_up_page.png" alt="sup" class="sup"> -->
+    <h1>A Bit About You</h1>
     <div class="container">
         <form class="sign-up">
             <table class="form-grid">
@@ -182,6 +231,7 @@ button:hover{
     </div>
     </div>
     </div>
+    <div class="white-box"></div>
     <!-- <div class="canvas-container">
         <canvas id="curved-canvas"></canvas>
     </div>
@@ -198,6 +248,10 @@ $(document).ready(function() {
         }
     });
 });
+
+
+</script><!-- this code is not working-->
+</html>
 
 
 </script><!-- this code is not working-->
